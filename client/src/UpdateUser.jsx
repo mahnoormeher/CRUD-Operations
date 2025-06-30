@@ -11,7 +11,7 @@ function UpdateUser() {
         const navigate = useNavigate()
 
         useEffect(()=>{
-axios.get('http://localhost:3001/getUser/'+id)
+axios.get('https://crud-operations-backened.onrender.com/getUser/'+id)
 .then(result=>{console.log(result)
   console.log("ID from useParams:", id);
 
@@ -25,7 +25,7 @@ setAge(result.data.age)
 
     const Update =(e)=>{
       e.preventDefault();
-        axios.put("http://localhost:3001/updateUser/"+id,{name,email,age})
+        axios.put("https://crud-operations-backened.onrender.com/updateUser/"+id,{name,email,age})
               .then(result =>{
                 console.log(result)
       navigate('/')
