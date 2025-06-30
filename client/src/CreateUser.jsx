@@ -11,7 +11,7 @@ function CreateUser() {
 
       const Submit= (e)=>{
         e.preventDefault();
-        axios.post("http://localhost:3001/createUser",{name,email,age})
+        axios.post("https://crud-operations-backened.onrender.com/createUser",{name,email,age})
         .then(result =>{
           console.log(result)
 navigate('/')
