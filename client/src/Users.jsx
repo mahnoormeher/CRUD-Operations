@@ -38,19 +38,19 @@ axios.get('https://crud-operations-backened.onrender.com')
     </thead>
 <tbody>
 {
-    users.map((user)=>{
-        return  <tr>
-            <td>{user.name}</td>
-             <td>{user.email}</td>
-              <td>{user.age}</td>
-               <td>
-                
-        <Link to ={`/update/${user._id}`} className='btn btn-success'>Update</Link>
-                <button className='btn btn-danger' onClick={(e)=>handlrDelete(user._id)}>Delete</button>
-                </td>
-        </tr>
-    })
+  Array.isArray(users) && users.map((user) => (
+    <tr key={user._id}>
+      <td>{user.name}</td>
+      <td>{user.email}</td>
+      <td>{user.age}</td>
+      <td>
+        <Link to={`/update/${user._id}`} className='btn btn-success'>Update</Link>
+        <button className='btn btn-danger' onClick={() => handlrDelete(user._id)}>Delete</button>
+      </td>
+    </tr>
+  ))
 }
+
 </tbody>
 
 </table>
