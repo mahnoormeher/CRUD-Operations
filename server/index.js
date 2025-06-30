@@ -51,6 +51,7 @@ app.delete('/deleteUser/:id',(req,res)=>{
 })
 
 app.post('/createUser',(req,res)=>{
+    console.log("🔥 Incoming Data:", req.body);
     UserModel.create(req.body)
     .then(users=> res.json(users))
     .catch(err => res.json(err))
