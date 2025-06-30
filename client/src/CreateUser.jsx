@@ -22,7 +22,7 @@ navigate('/')
 
   return (
  <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
-      <div className='w-50 bg-white rounded p-3'>
+      <div className='container bg-white rounded p-4 shadow'>
 
         <form onSubmit={Submit} >
             <h2>Add User</h2>
@@ -38,7 +38,7 @@ navigate('/')
                 <label htmlFor=''>Age</label>
                 <input type="text" placeholder='Enter Age' className='form-control' onChange={(e)=>setAge(e.target.value)}/>
             </div>
-            <button className='btn btn-success'>Submit</button>
+            <button className='btn btn-success w-100'>Submit</button>
             </form>
       </div>
       

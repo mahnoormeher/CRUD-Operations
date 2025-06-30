@@ -34,7 +34,7 @@ setAge(result.data.age)
     }
   return (
     <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
-      <div className='w-50 bg-white rounded p-3'>
+      <div className='container bg-white rounded p-4 shadow'>
 
         <form onSubmit={Update}>
             <h2>Update User</h2>
